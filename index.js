@@ -68,8 +68,8 @@ console.log(CemberinCevresi());
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(yariCap = 15, pi) {
-  return Math.pow(yariCap, 2) * pi;
+function CemberinAlani(yariCap = 15, x = pi) {
+  return Math.pow(yariCap, 2) * x;
   
 }
 
