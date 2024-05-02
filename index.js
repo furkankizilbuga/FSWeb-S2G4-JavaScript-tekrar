@@ -58,7 +58,7 @@ function CemberinCevresi(yariCap = 5) {
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
-console.log(CemberinCevresi())
+console.log(CemberinCevresi());
 
 /* 	GÖREV 2:  
 - CemberinAlani fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
@@ -68,11 +68,14 @@ console.log(CemberinCevresi())
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yariCap = 15, pi) {
+  return Math.pow(yariCap, 2) * pi;
+  
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
+
+console.log(CemberinAlani());
 
 /* 	GÖREV 3:
 	- Sayfanın en üstünde global değişken olarak tanımlanmış bir sayilar dizisi bulunmaktadır. Bu dizi içinde 0 ile 1000 arasında rasgele oluşturulmuş tam sayılar ve ondalıklı sayılar bulunmaktadır. Bu diziyi kullanarak aşağıdakileri uygulayın:
@@ -103,11 +106,40 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+enkucuk = sayilar[0];
+enbuyuk = sayilar[1];
+
+for(let i = 0; i < sayilar.length; i++){
+  if(sayilar[i] < enkucuk){
+    enkucuk = sayilar[i];
+  } else {
+    i++;
+  }
+}
+
+for(let p = 0; p < sayilar.length; p++){
+  if(sayilar[p] > enbuyuk){
+    enbuyuk = sayilar[p];
+  } else {
+    p++;
+  }
+}
+
+console.log(enkucuk);
+console.log(enbuyuk);
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler = [];
+
+sayilar.forEach(sayi => {
+  if(sayi % 3 == 0){
+    ucetambolunenler.push(sayi)
+  }
+})
+
+console.log(ucetambolunenler);
+
 
 // 3c çözümü:
 
