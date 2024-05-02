@@ -143,19 +143,53 @@ console.log(ucetambolunenler);
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => 
+  toplam + sayi
+, 0)
+
+console.log(ucebolunenlerintoplami);
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter(sayi => sayi < 500);
+
+console.log(besyuzdenkucuksayilar);
+
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a - b)
+
+console.log(siralisayilar);
+
 
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+let obj = {};
+
+sayilar.forEach(sayi => {
+  if(obj[sayi] === undefined){
+    obj[sayi] = 1;
+  } else {
+    obj[sayi]++
+  }
+})
+
+Object.entries(obj).forEach(([key, value]) => {
+  if(value === 1){
+    delete obj[key]
+  }
+})
+
+Object.keys(obj).forEach(key => {
+  let value = obj[key];
+  tekraredensayilar.push(`${key} sayısı ${value} kere tekrar edilmiştir`)
+})
+
+console.log(tekraredensayilar);
+
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
